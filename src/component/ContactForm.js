@@ -1,10 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import { Form, Button, InputGroup } from "react-bootstrap";
+import { UseDispatch, useDispatch } from "react-redux";
 
 const ContactForm = () => {
+  const [name, setName] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState(0);
+  const dispatch = useDispatch();
+
+  const addContact = (event) => {
+    event.preventDefault();
+    dispatch({
+      type: "ADD_CONTACT",
+      // payload: { name: name, phoneNumber: phoneNumber },
+      payload: { name, phoneNumber },
+    });
+  };
+
   return (
     <div className="contact-form-section">
-      <Form>
+      <Form onSubmit={addContact}>
         <InputGroup className="mb-3" controlId="formName">
           <InputGroup.Text id="basic-addon1">이름</InputGroup.Text>
           <Form.Control
@@ -13,6 +27,7 @@ const ContactForm = () => {
             aria-label="formName"
             aria-describedby="basic-addon1"
             size="lg"
+            onChange={(event) => setName(event.target.value)}
           />
         </InputGroup>
 
@@ -24,6 +39,7 @@ const ContactForm = () => {
             aria-label="formContact"
             aria-describedby="basic-addon2"
             size="lg"
+            onChange={(event) => setPhoneNumber(event.target.value)}
           />
         </InputGroup>
         <Button variant="primary" type="submit" size="lg">
