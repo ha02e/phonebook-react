@@ -7,8 +7,8 @@ const ContactItem = () => {
       <Row>
         <Col lg={2}>
           <img
-            width={80}
-            height={80}
+            width={70}
+            height={70}
             src="https://img.icons8.com/3d-fluency/94/user-male-circle.png"
             alt="user-male-circle"
           />
