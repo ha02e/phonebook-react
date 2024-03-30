@@ -1,3 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
 .title {
   text-align: center;
+  margin: 1em 0;
+}
+
+.contact-form-section input {
+  font-size: 1em;
+}
+
+.contact-form-section button {
+  width: 100%;
+  font-size: 1em;
+}
+
+.search-section {
+  margin-bottom: 1em;
+}
+
+.search-section input {
+  width: 100%;
+  font-size: 1em;
+}
+
+.search-section button {
+  width: 100%;
+  font-size: 1em;
+}
+
+.contact-item {
+  border: 2px solid #efefef;
+  border-radius: 10px;
+  margin: 0.6em 0;
+  padding: 0.6em 1em;
+}
+
+.contact-item .item-name {
+  font-size: 1.4em;
+  font-weight: 600;
+}
+
+.contact-item .item-phone {
+  font-size: 1.2em;
+  color: #8e8e8e;
 }
